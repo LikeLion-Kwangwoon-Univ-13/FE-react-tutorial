@@ -9,38 +9,25 @@ export default function PartB() {
 
   return (
     <div className="flex flex-col gap-3.5">
-      <Description title="객체 (object)" description="" />
-      <Description title="배열 (array)" />
       <Description
         title="본인 이름을 아래에 추가해보세요."
         isAssignment={true}
       />
-      <div className="h-full flex justify-between">
-        <div className="border-2 border-black h-full w-1/5 p-1.5">
-          <div>Q: 본인 이름을 아래에 추가해보세요.</div>
-          {"["}
-          {students.map((student) => (
+      <div className="border-2 border-black h-120 overflow-y-scroll w-1/5 p-1.5">
+        <div>Q: 본인 이름을 아래에 추가해보세요.</div>
+        {"["}
+        {students.map((student) => (
+          <div className="pl-3.5">
+            <div>{"{"}</div>
             <div className="pl-3.5">
-              <div>{"{"}</div>
-              <div className="pl-3.5">
-                <div>id: {student.id}</div>
-                <div>name: {student.name}</div>
-              </div>
-              <div>{"},"}</div>
+              <div>id: {student.id}</div>
+              <div>name: {student.name}</div>
             </div>
-          ))}
-          {"]"}
-        </div>
+            <div>{"},"}</div>
+          </div>
+        ))}
+        {"]"}
       </div>
-    </div>
-  );
-}
-
-function StudentCard({ student }) {
-  return (
-    <div className="flex ">
-      <div>{student.id}</div>
-      <div>{student.name}</div>
     </div>
   );
 }

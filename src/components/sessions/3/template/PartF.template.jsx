@@ -33,7 +33,7 @@ export default function PartF() {
         description="주어진 state를 잘 이용하여 초당 한번만 Effect가 작동하게 howMuchRendered를 조절하세요"
         isAssignment={true}
       />
-      {howMuchRendered}
+      howMuchRendered: {howMuchRendered}
     </div>
   );
 }

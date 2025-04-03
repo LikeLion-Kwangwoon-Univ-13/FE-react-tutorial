@@ -13,7 +13,7 @@ export default function PartD() {
     <div className="flex flex-col gap-y-3.5">
       <Description
         title="Q: map, filter, sort문 실습"
-        description="1. 호출된 students 배열, Student카드로 학생리스트 불러오기, 2. 배열 메서드를 이용하여 박민형 제거, 3. 학번 순 정렬"
+        description="1. 호출된 students 배열, StudentCard로 학생리스트 불러오기, 2. 배열 메서드를 이용하여 박민형 제거, 3. 학번 순 정렬"
         isAssignment={true}
       />
       <div className="flex flex-col w-1/3 gap-y-3.5">
