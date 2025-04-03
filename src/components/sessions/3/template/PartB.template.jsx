@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import { useSessionTitle } from "../../useSession";
+import Description from "../../../../design/Description";
 
 export default function PartB() {
   useSessionTitle({
@@ -8,25 +8,29 @@ export default function PartB() {
   });
 
   return (
-    <div className="h-full flex justify-between">
-      <div className="border-2 border-black h-full w-1/5 p-1.5">
-        <div>Q: 본인 이름을 아래에 추가해보세요.</div>
-        {"["}
-        {students.map((student) => (
-          <div className="pl-3.5">
-            <div>{"{"}</div>
+    <div className="flex flex-col gap-3.5">
+      <Description title="객체 (object)" description="" />
+      <Description title="배열 (array)" />
+      <Description
+        title="본인 이름을 아래에 추가해보세요."
+        isAssignment={true}
+      />
+      <div className="h-full flex justify-between">
+        <div className="border-2 border-black h-full w-1/5 p-1.5">
+          <div>Q: 본인 이름을 아래에 추가해보세요.</div>
+          {"["}
+          {students.map((student) => (
             <div className="pl-3.5">
-              <div>id: {student.id}</div>
-              <div>name: {student.name}</div>
+              <div>{"{"}</div>
+              <div className="pl-3.5">
+                <div>id: {student.id}</div>
+                <div>name: {student.name}</div>
+              </div>
+              <div>{"},"}</div>
             </div>
-            <div>{"},"}</div>
-          </div>
-        ))}
-        {"]"}
-      </div>
-      <div className="w-1/2 overflow-y-scroll border-2 border-black p-3.5">
-        <div>중괄호는 object입니다.</div>
-        <div>대괄호는 배열(Array)</div>
+          ))}
+          {"]"}
+        </div>
       </div>
     </div>
   );
@@ -48,11 +52,12 @@ function StudentCard({ student }) {
  * @typedef {string[] | number[] | boolean[] | Object[]}
  * 등으로 다양하게 표현될 수 있습니다.
  */
-const students = [
+export const students = [
   /**
    * @description
    * 아래는 object입니다.
    * object key, value로 이루어져있으며 key는 중복될 수 없어요 :)
+   * 근데 저 export는 뭘까요?
    */
   {
     id: 2019203002,

@@ -1,3 +1,4 @@
+import Description from "../../../../design/Description";
 import { useSessionTitle } from "../../useSession";
 import { useState } from "react";
 
@@ -43,19 +44,24 @@ export default function PartA() {
   };
 
   return (
-    <div>
-      <p>아래 버튼을 눌러 각각의 변수를 실행해 보세요:</p>
-      <div className="flex gap-2 mt-2">
-        <button onClick={() => runExample("var")}>var</button>
-        <button onClick={() => runExample("let")}>let</button>
-        <button onClick={() => runExample("const")}>const</button>
+    <div className="flex flex-col gap-y-3.5">
+      <Description title="var" description="var는 함수 스코프" />
+      <Description title="let" description="let은 블록 스코프" />
+      <Description title="const" description="const는 상수" />
+      <div>
+        <p>아래 버튼을 눌러 각각의 변수를 실행해 보세요:</p>
+        <div className="flex gap-2 mt-2">
+          <button onClick={() => runExample("var")}>var</button>
+          <button onClick={() => runExample("let")}>let</button>
+          <button onClick={() => runExample("const")}>const</button>
+        </div>
+        <div className="mt-4">
+          {log.map((line, i) => (
+            <p key={i}>{line}</p>
+          ))}
+        </div>
+        <div>{description}</div>
       </div>
-      <div className="mt-4">
-        {log.map((line, i) => (
-          <p key={i}>{line}</p>
-        ))}
-      </div>
-      <div>{description}</div>
     </div>
   );
 }

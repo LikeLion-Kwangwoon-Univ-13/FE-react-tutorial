@@ -1,3 +1,4 @@
+import Description from "../../../../design/Description";
 import { useSessionTitle } from "../../useSession";
 
 /**
@@ -9,15 +10,13 @@ export default function PartC() {
     subtitle: "함수의 다양한 표현을 알아봐요",
   });
   const thing = "you";
-  const things = ["you", "me"];
-
-  const toWhat = (thing) => "what";
-  /**
-   * 하단에서 함수를 가져와서 toWhat함수를 교체해보아요
-   * 함수는 밑에 모아놓았어요.
-   */
+  const toWhat = () => "what";
   return (
     <div>
+      <Description
+        title="Q: 코드 하단에서 함수를 가져와서 강아지, 고양이, 소의 이미지를 불러와보세요."
+        isAssignment={true}
+      />
       <img src={`/images/session3/${toWhat(thing)}.webp`} />
     </div>
   );
@@ -37,7 +36,6 @@ function toDog(thing) {
  * 화살표 함수로 정의된 고양이를 출력하는 함수!
  * @param {*} thing
  * @returns {Animal}
- * 근데 저 export는 뭘까요?
  */
 export const toCat = (thing) => {
   return "cat";
