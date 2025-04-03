@@ -16,5 +16,5 @@ export default function Session3() {
   if (part === 3) return <PartD />;
   if (part === 4) return <PartE />;
   if (part === 5) return <PartF />;
-  return <PartG />;
+  return <PartF />;
 }
