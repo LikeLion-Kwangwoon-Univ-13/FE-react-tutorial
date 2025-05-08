@@ -10,10 +10,13 @@ function PartC() {
   useSessionTitle({ title: 'POST 실습' });
 
   const postMember=async()=>{
-    const response=await memberApi.post(universityId,{name})
-    console.log(response)
-    setName("")
-    setUniversityId("")
+    /**
+     * TODO: memberApi.post()를 호출하여 당신을 추가하세요.
+     */
+    try{}
+    catch(err){
+      console.log(err)
+    }
   }
   
   return (

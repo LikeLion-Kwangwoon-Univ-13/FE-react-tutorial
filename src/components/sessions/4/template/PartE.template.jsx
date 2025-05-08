@@ -9,7 +9,7 @@ function PartE() {
   const patchCode = async () => {
       /**
        * TODO: memberApi.patch()를 호출하여 XX..인 code의 당신을 변경하세요.
-       * 힌트: 광운대학교의 id는 5, 프론트엔드의 id는 1이에요.
+       * 힌트: 학교번호와 파트번호는 swagger에서 확인이 가능해요
        */
       try{
       

@@ -8,7 +8,7 @@ function PartF() {
   const deleteMember = async () => {
     /**
      * TODO: deleteMember를 구현해서 [삭제 요망]인 당신을 삭제하세요.
-     * 힌트: 광운대학교의 id는 5, 프론트엔드의 id는 1이에요.
+     * 힌트: 학교번호와 파트번호는 swagger에서 확인이 가능해요
      */
     try{
     }catch(error){
