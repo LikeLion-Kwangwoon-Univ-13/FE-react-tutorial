@@ -16,7 +16,7 @@ const sessions = [
   },
   {
     subject: "4. Promise와 API 통신",
-    pathname: "#",
+    pathname: "/sessions/4",
   },
   {
     subject: "5. 협업을 위한 준비",
